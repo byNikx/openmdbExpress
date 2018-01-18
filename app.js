@@ -11,6 +11,7 @@ let mongoose = require('mongoose');
 
 let index = require('./routes/index');
 let users = require('./routes/users');
+var api = require('./routes/api.route');
 
 let app = express();
 
@@ -49,6 +50,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/api', api);
+// app.use('/', index);
+// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -69,9 +73,9 @@ app.use(function(err, req, res, next) {
 });
 
 
+
 // Get the API route ...
 
-var api = require('./routes/api.route')
 
 
 // Other stuffs ...
@@ -79,11 +83,6 @@ var api = require('./routes/api.route')
 
 
 //Use the Routes
-app.use('/', index);
-app.use('/users', users);
 
-//Use the API routes for all routes matching /api
-
-app.use('/api', api);
 
 module.exports = app;

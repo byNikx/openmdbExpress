@@ -4,10 +4,14 @@ var router = express.Router()
 
 // Getting the Todo Controller that we just created
 
-var ToDoController = require('../../controllers/test.controller');
+var ToDoController = require('../../controllers/todos.controller');
 
 
 // Map each API to the Controller FUnctions
+
+router.get('/test', function(req, res, next) {
+  res.send('respond with a resource');
+});
 
 router.get('/', ToDoController.getTodos)
 

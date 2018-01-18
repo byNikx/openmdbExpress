@@ -1,4 +1,4 @@
-let mongoose = require('mongoose');
+var mongoose = require('mongoose')
 var mongoosePaginate = require('mongoose-paginate')
 
 

@@ -1,5 +1,5 @@
 // Gettign the Newly created Mongoose Model we just created 
-var ToDo = require('../models/test.model')
+var ToDo = require('../models/todo.model')
 
 // Saving the context of this module inside the _the variable
 _this = this
